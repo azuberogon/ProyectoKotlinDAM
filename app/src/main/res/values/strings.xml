@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ElClubDeLaLectura</string>
+    <string name="Pregunta_cuentaExistente">¿Ya tienes una cuenta?</string>
+    <string name="Navegacion">Log in</string>
+    <string name="Sign_up">Sign Up</string>
+    <string name="confirm_password">confirmar contraseña</string>
+    <string name="password">Contraseña</string>
+    <string name="email">Email</string>
+    <string name="Username">nombre de usuario</string>
+    <string name="bottom_nav_user">usuario</string>
+    <string name="bottom_nav_libro">libro</string>
+    <string name="bottom_nav_mas">añadir\n</string>
+    <string name="bottom_nav_compartir">compartir</string>
+    <string name="bottom_nav_biblioteca">biblioteca</string>
+</resources>

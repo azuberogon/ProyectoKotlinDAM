@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_user"
+        android:icon="@drawable/user"
+        android:title="@string/bottom_nav_user" />
+    <item
+        android:id="@+id/page_misLibros"
+        android:icon="@drawable/libro"
+        android:title="@string/bottom_nav_libro" />
+
+    app:labelVisibilityMode ="unlabeled"
+    app:labelVisibilityMode ="labeled"
+    app:labelVisibilityMode ="selected"
+    <item
+        android:id="@+id/page_mas"
+        android:icon="@drawable/mas"
+        android:title="@string/bottom_nav_mas" />
+    <item
+        android:id="@+id/page_compartir"
+        android:icon="@drawable/tres_puntos"
+        android:title="@string/bottom_nav_compartir" /> <!-- aqui debes añadir otra cosa mas-->
+    <item
+        android:id="@+id/page_busqedaBiblioteca"
+        android:icon="@drawable/libreria"
+        android:title="@string/bottom_nav_biblioteca" />
+</menu>
