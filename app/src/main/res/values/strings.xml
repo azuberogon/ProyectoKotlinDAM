@@ -1,15 +1,19 @@
 <resources>
-    <string name="app_name">ElClubDeLaLectura</string>
-    <string name="Pregunta_cuentaExistente">¿Ya tienes una cuenta?</string>
-    <string name="Navegacion">Log in</string>
-    <string name="Sign_up">Sign Up</string>
-    <string name="confirm_password">confirmar contraseña</string>
-    <string name="password">Contraseña</string>
-    <string name="email">Email</string>
-    <string name="Username">nombre de usuario</string>
-    <string name="bottom_nav_user">usuario</string>
-    <string name="bottom_nav_libro">libro</string>
-    <string name="bottom_nav_mas">añadir\n</string>
-    <string name="bottom_nav_compartir">compartir</string>
-    <string name="bottom_nav_biblioteca">biblioteca</string>
+    <string name="app_name">Aguas</string>
+
+    <string name="red">Red</string>
+    <string name="indigo">Indigo</string>
+    <string name="green">Green</string>
+    <string name="orange">Orange</string>
+    <string name="blue">Blue</string>
+    <string name="yellow">Yellow</string>>
+    <string name="grey">Grey</string>
+    <string name="bluegrey" >Blue Grey</string>
+    <string name="amber">Amber</string>
+    <string name="teal">Teal</string>
+    <string name="deeppurple" >Deep Purple </string>
+    <string name="cyan">Cyan</string>
+    <string name="brown">Brown</string>
+
+
 </resources>

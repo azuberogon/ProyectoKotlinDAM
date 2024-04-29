@@ -1,4 +1,4 @@
-package com.example.elclubdelalectura
+package com.example.aguas
 
 import org.junit.Test
 

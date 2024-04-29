@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.elclubdelalectura"
+    namespace = "com.example.aguas"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.elclubdelalectura"
+        applicationId = "com.example.aguas"
         minSdk = 28
         targetSdk = 34
         versionCode = 1
@@ -34,17 +34,6 @@ android {
         jvmTarget = "1.8"
     }
 }
-// Configuración de la generación de documentación con Dokka
-tasks.dokkaJavadoc.configure {
-    outputDirectory.set(file("../documentation/Javadoc")) // Directorio de salida para la documentación Javadoc
-}
-tasks.dokkaHtml.configure {
-    outputDirectory.set(file("../documentation/html")) // Directorio de salida para la documentación HTML
-}
-
-tasks.dokkaGfm.configure {
-    outputDirectory.set(file("../documentation/Gfm")) // Directorio de salida para la documentación GFM
-}
 
 dependencies {
 
@@ -55,6 +44,4 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    dokkaPlugin("org.jetbrains.dokka:android-documentation-plugin:1.9.10")
-
 }

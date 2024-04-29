@@ -1,10 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Navigation_menu" parent="Theme.MaterialComponents.DayNight.NoActionBar" >
+    <style name="Base.Theme.Aguas" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary" >@color/primary </item>
         <item name="colorPrimaryDark" >@color/primaryDark </item>
         <item name="toolbarStyle" >@style/Widget.MaterialComponents.Toolbar.PrimarySurface </item>
     </style>
 
-    <style name="Theme.ElClubDeLaLectura" parent="Base.Theme.ElClubDeLaLectura" />
+    <style name="RowTitle" parent="TextAppearance.MaterialComponents.Headline6" />
+
+    <style name="RowSubtitle" parent="TextAppearance.MaterialComponents.Subtitle2" >
+        <item name="android:textColor" >?android:attr/textColorSecondary </item>
+    </style>
+
+
+    <style name="Theme.Aguas" parent="Base.Theme.Aguas" />
 </resources>

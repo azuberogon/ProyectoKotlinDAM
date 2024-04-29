@@ -1,9 +1,0 @@
-$dokka.format:html-v1
-$dokka.linkExtension:html
-$dokka.location:com.example.elclubdelalectura////PointingToDeclaration/app/com.example.elclubdelalectura/index.html
-$dokka.location:com.example.elclubdelalectura/MainActivity///PointingToDeclaration/app/com.example.elclubdelalectura/-main-activity/index.html
-$dokka.location:com.example.elclubdelalectura/MainActivity/MainActivity/#/PointingToDeclaration/app/com.example.elclubdelalectura/-main-activity/-main-activity.html
-$dokka.location:com.example.elclubdelalectura/Menu_principal///PointingToDeclaration/app/com.example.elclubdelalectura/-menu_principal/index.html
-$dokka.location:com.example.elclubdelalectura/Menu_principal/Menu_principal/#/PointingToDeclaration/app/com.example.elclubdelalectura/-menu_principal/-menu_principal.html
-com.example.elclubdelalectura
-
