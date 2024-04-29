@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
 
 class menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,4 +40,33 @@ class menu : AppCompatActivity() {
         return String.format("#%06X", 0xFFFFFF and ContextCompat.getColor( this, colorResId))
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
