@@ -11,7 +11,11 @@
     <style name="RowSubtitle" parent="TextAppearance.MaterialComponents.Subtitle2" >
         <item name="android:textColor" >?android:attr/textColorSecondary </item>
     </style>
-
+    <style name="Theme.Navigation_menu" parent="Theme.MaterialComponents.DayNight.NoActionBar" >
+        <item name="colorPrimary" >@color/primary </item>
+        <item name="colorPrimaryDark" >@color/primaryDark </item>
+        <item name="toolbarStyle" >@style/Widget.MaterialComponents.Toolbar.PrimarySurface </item>
+    </style>
 
     <style name="Theme.Aguas" parent="Base.Theme.Aguas" />
 </resources>

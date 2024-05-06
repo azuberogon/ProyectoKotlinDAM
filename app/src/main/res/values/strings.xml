@@ -14,6 +14,9 @@
     <string name="deeppurple" >Deep Purple </string>
     <string name="cyan">Cyan</string>
     <string name="brown">Brown</string>
+    <string name="add_favorites">añadir a favoritos</string>
+    <string name="misPeliculas">mis peliculas</string>
+    <string name="peliculas">todas las peliculas\n</string>
 
 
 </resources>

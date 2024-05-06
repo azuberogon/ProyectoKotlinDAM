@@ -2,6 +2,8 @@ package com.example.aguas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.widget.Toolbar
+
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
@@ -19,6 +21,11 @@ class menu : AppCompatActivity() {
                 Datos( "Naranja", "#2196F3")
             )
         )
+
+        val toolbar: Toolbar = findViewById(R.id. toolbar)
+        setSupportActionBar(toolbar)
+
+
     }
 
     private fun buildColors (): List<Datos> {
