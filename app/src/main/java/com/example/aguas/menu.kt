@@ -2,6 +2,8 @@ package com.example.aguas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 
 import androidx.core.content.ContextCompat
@@ -18,16 +20,37 @@ class menu : AppCompatActivity() {
             listOf(
                 Datos( "Azul", "#2196F3"),
                 Datos( "Rojo", "#2196F3"),
+                Datos( "Naranja", "#2196F3"),
+                Datos( "Azul", "#2196F3"),
+                Datos( "Rojo", "#2196F3"),
                 Datos( "Naranja", "#2196F3")
             )
         )
 
-        val toolbar: Toolbar = findViewById(R.id. toolbar)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+
 
 
     }
 
+    override fun onOptionsItemSelected (item: MenuItem): Boolean {
+        if (item.itemId == R.id.ajustes_action) {
+            Toast.makeText( this, "ajustes",
+                Toast.LENGTH_SHORT).show()
+        }else if (item.itemId == R.id.registrarse_action) {
+            Toast.makeText( this, "registrarse",
+                Toast.LENGTH_SHORT).show()
+        }else if (item.itemId == R.id.inicioSesion_action) {
+            Toast.makeText( this, "inicio de sesion",
+                Toast.LENGTH_SHORT).show()
+        }else if (item.itemId == R.id.about_action) {
+            Toast.makeText( this, "about",
+                Toast.LENGTH_SHORT).show()
+        }
+        return true
+    }
     private fun buildColors (): List<Datos> {
         return listOf(
             Datos(getString(R.string.red), getColorHex(R.color.red)),

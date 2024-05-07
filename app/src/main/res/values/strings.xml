@@ -25,6 +25,9 @@
     <string name="sigiente">Sigiente</string>
     <string name="cancelar">Cancelar</string>
     <string name="apellido">Apellido</string>
+    <string name="inicio_de_sesion">inicio de sesión</string>
+    <string name="ajustes">ajustes</string>
+    <string name="about">about</string>
 
 
 </resources>
