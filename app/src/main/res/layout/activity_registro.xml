@@ -11,14 +11,15 @@
         android:layout_height="729dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Registro"
+            android:text="@string/registro"
             android:textSize="34sp" />
 
         <EditText
@@ -26,45 +27,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text"
-            android:text="Nombre" />
+            android:hint="@string/nombre_de_usuario"
+            android:inputType="text"/>
 
         <EditText
             android:id="@+id/editTxtApellidoR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text"
-            android:text="Apellido" />
+            android:hint="@string/apellido"
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/editTxtCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text"
-            android:text="Correo" />
+            android:hint="@string/correo"
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/editTxtContraseñaR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/contrase_a"
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btnSiguiente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:text="Button" />
+            android:layout_marginTop="405dp"
+            android:text="@string/sigiente" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/btnCancelar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="bottom|center"
-            android:text="Button" />
+            android:text="@string/cancelar" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
