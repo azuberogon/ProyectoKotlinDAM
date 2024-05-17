@@ -4,19 +4,19 @@
         <item
             android:id="@+id/ajustes_action"
             android:title="@string/ajustes"
-            app:showAsAction="ifRoom" />
+            app:showAsAction="never" />
         <item
             android:id="@+id/registrarse_action"
             android:title="@string/registrarse"
-            app:showAsAction="ifRoom" />
+            app:showAsAction="never" />
         <item
             android:id="@+id/inicioSesion_action"
             android:title="@string/inicio_de_sesion"
-            app:showAsAction="ifRoom" />
+            app:showAsAction="never" />
     <item
         android:id="@+id/about_action"
         android:title="@string/about"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
 
 
 </menu>

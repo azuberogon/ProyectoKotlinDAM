@@ -1,19 +1,22 @@
 package com.example.aguas
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.google.gson.Gson
 
 class menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+
+
         val recycler: RecyclerView =
             findViewById(R.id. recycler)
         recycler.adapter = Adapter(
@@ -34,22 +37,41 @@ class menu : AppCompatActivity() {
 
 
     }
-
-    override fun onOptionsItemSelected (item: MenuItem): Boolean {
-        if (item.itemId == R.id.ajustes_action) {
-            Toast.makeText( this, "ajustes",
-                Toast.LENGTH_SHORT).show()
-        }else if (item.itemId == R.id.registrarse_action) {
-            Toast.makeText( this, "registrarse",
-                Toast.LENGTH_SHORT).show()
-        }else if (item.itemId == R.id.inicioSesion_action) {
-            Toast.makeText( this, "inicio de sesion",
-                Toast.LENGTH_SHORT).show()
-        }else if (item.itemId == R.id.about_action) {
-            Toast.makeText( this, "about",
-                Toast.LENGTH_SHORT).show()
-        }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        // Infla el menú; esto agrega los ítems al action bar si está presente.
+        menuInflater.inflate(R.menu.menu_tres_puntos, menu)
         return true
+    }
+    override fun onOptionsItemSelected (item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.ajustes_action -> {
+                Toast.makeText(this, "Ajustes", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Ajustes::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.registrarse_action -> {
+                Toast.makeText(this, "Registrarse", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Registro::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.inicioSesion_action -> {
+                Toast.makeText(this, "inicio de sesion", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.about_action -> {
+                Toast.makeText(this, "about", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this, About::class.java)
+                startActivity(intent)
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+
     }
     private fun buildColors (): List<Datos> {
         return listOf(
@@ -74,29 +96,7 @@ class menu : AppCompatActivity() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
 
