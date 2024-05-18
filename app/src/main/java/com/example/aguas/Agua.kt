@@ -1,7 +1,13 @@
 package com.example.aguas
 
 import com.google.gson.Gson
-
+/**
+ *
+ *
+ *
+ *
+ * @autor Aitor
+ * */
 
 class Agua(
     val id: Int,

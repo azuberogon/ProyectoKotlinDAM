@@ -7,7 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-
+/**
+ *
+ *
+ *
+ *
+ * @autor Aitor
+ * */
 class Adapter(private val datos: List<Datos>) : RecyclerView.Adapter<Adapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val row: View = LayoutInflater.from(parent.context).inflate(R.layout.row, parent, false)

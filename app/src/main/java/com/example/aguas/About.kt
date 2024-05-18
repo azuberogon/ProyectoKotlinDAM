@@ -6,7 +6,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aguas.adapterText.AdapterText
-
+/**
+ *
+ *
+ *
+ *
+ * @autor Aitor
+ * */
 class About : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,12 +27,7 @@ class About : AppCompatActivity() {
         recyclerView.adapter = adapter
     */
 
-        /*
-        * @Return esto es uan prueba
-        *
-        *
-        *
-        * */
+
         val scrollViewText = findViewById<TextView>(R.id.loremimpsun)
         val loremIpsum = resources.getString(R.string.sample_contract_text)
         scrollViewText.text = loremIpsum

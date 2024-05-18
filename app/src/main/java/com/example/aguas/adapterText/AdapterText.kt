@@ -6,7 +6,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aguas.R
-
+/**
+ *
+ *
+ *
+ *
+ * @autor Aitor
+ * */
 class AdapterText(private val dataSet: Array<String>) :
     RecyclerView.Adapter<AdapterText.ViewHolder>() {
 

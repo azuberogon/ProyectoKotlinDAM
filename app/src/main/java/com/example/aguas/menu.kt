@@ -10,7 +10,13 @@ import androidx.appcompat.widget.Toolbar
 
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-
+/**
+ *
+ *
+ *
+ *
+ * @autor Aitor
+ * */
 class menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
