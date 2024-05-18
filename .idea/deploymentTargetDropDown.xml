@@ -8,9 +8,6 @@
       <entry key="app">
         <State />
       </entry>
-      <entry key="testButtonClickNavigation()">
-        <State />
-      </entry>
       <entry key="testButtonRegistrarNavigation()">
         <State>
           <runningDeviceTargetSelectedWithDropDown>
@@ -26,6 +23,9 @@
           </runningDeviceTargetSelectedWithDropDown>
           <timeTargetWasSelectedWithDropDown value="2024-05-18T17:10:31.545764900Z" />
         </State>
+      </entry>
+      <entry key="testButtonRegistrarNavigationV2()">
+        <State />
       </entry>
       <entry key="useAppContext()">
         <State />

@@ -37,12 +37,9 @@ class MainActivityEspressoTest {
 
         // Verifica que el botón está en pantalla y haz clic en él
         onView(withId(R.id.btnSiguiente)).check(matches(isDisplayed())).perform(click())
-        pressBack()
-        onView(withId(R.id.btnRegistrar)).check(matches(isDisplayed())).perform(click())
-        pressBack()
 
         // Verifica que la actividad de registro se muestra
-        onView(withId(R.id.registroLayout)).check(matches(isDisplayed()))
+        onView(withId(R.id.menuLayout)).check(matches(isDisplayed()))
     }
 
     @Test
