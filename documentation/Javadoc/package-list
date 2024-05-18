@@ -1,0 +1,8 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.example.aguas.adapterText/AdapterText.ViewHolder///PointingToDeclaration/com/example/aguas/adapterText/AdapterText.ViewHolder.html
+$dokka.location:com.example.aguas/Adapter.ViewHolder///PointingToDeclaration/com/example/aguas/Adapter.ViewHolder.html
+com.example.aguas
+com.example.aguas.adapterText
+com.example.aguas.data
+

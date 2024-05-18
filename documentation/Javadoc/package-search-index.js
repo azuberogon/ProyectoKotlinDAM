@@ -1,0 +1,1 @@
+var packageSearchIndex = [{"l":"com.example.aguas","url":"com/example/aguas/package-summary.html"}, {"l":"com.example.aguas.adapterText","url":"com/example/aguas/adapterText/package-summary.html"}, {"l":"com.example.aguas.data","url":"com/example/aguas/data/package-summary.html"}, {"l":"All packages","url":"index.html"}]

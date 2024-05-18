@@ -20,6 +20,13 @@ class About : AppCompatActivity() {
         val adapter = AdapterText(loremIpsumArray)
         recyclerView.adapter = adapter
     */
+
+        /*
+        * @Return esto es uan prueba
+        *
+        *
+        *
+        * */
         val scrollViewText = findViewById<TextView>(R.id.loremimpsun)
         val loremIpsum = resources.getString(R.string.sample_contract_text)
         scrollViewText.text = loremIpsum

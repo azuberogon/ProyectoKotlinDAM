@@ -35,6 +35,18 @@ android {
     }
 }
 
+// Configuración de la generación de documentación con Dokka
+tasks.dokkaJavadoc.configure {
+    outputDirectory.set(file("../documentation/Javadoc")) // Directorio de salida para la documentación Javadoc
+}
+tasks.dokkaHtml.configure {
+    outputDirectory.set(file("../documentation/html")) // Directorio de salida para la documentación HTML
+}
+
+tasks.dokkaGfm.configure {
+    outputDirectory.set(file("../documentation/Gfm")) // Directorio de salida para la documentación GFM
+}
+
 dependencies {
 
     implementation("androidx.core:core-ktx:1.12.0")
@@ -53,5 +65,11 @@ dependencies {
     //retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Dependencias para pruebas
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
 
 }

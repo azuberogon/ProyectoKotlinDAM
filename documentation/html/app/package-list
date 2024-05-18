@@ -1,0 +1,57 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.example.aguas.adapterText////PointingToDeclaration/app/com.example.aguas.adapterText/index.html
+$dokka.location:com.example.aguas.adapterText/AdapterText.ViewHolder///PointingToDeclaration/app/com.example.aguas.adapterText/-adapter-text/-view-holder/index.html
+$dokka.location:com.example.aguas.adapterText/AdapterText.ViewHolder/ViewHolder/#android.view.View/PointingToDeclaration/app/com.example.aguas.adapterText/-adapter-text/-view-holder/-view-holder.html
+$dokka.location:com.example.aguas.adapterText/AdapterText.ViewHolder/textView/#/PointingToDeclaration/app/com.example.aguas.adapterText/-adapter-text/-view-holder/text-view.html
+$dokka.location:com.example.aguas.adapterText/AdapterText///PointingToDeclaration/app/com.example.aguas.adapterText/-adapter-text/index.html
+$dokka.location:com.example.aguas.adapterText/AdapterText/AdapterText/#kotlin.Array[kotlin.String]/PointingToDeclaration/app/com.example.aguas.adapterText/-adapter-text/-adapter-text.html
+$dokka.location:com.example.aguas.adapterText/AdapterText/getItemCount/#/PointingToDeclaration/app/com.example.aguas.adapterText/-adapter-text/get-item-count.html
+$dokka.location:com.example.aguas.adapterText/AdapterText/onBindViewHolder/#com.example.aguas.adapterText.AdapterText.ViewHolder#kotlin.Int/PointingToDeclaration/app/com.example.aguas.adapterText/-adapter-text/on-bind-view-holder.html
+$dokka.location:com.example.aguas.adapterText/AdapterText/onCreateViewHolder/#android.view.ViewGroup#kotlin.Int/PointingToDeclaration/app/com.example.aguas.adapterText/-adapter-text/on-create-view-holder.html
+$dokka.location:com.example.aguas.data////PointingToDeclaration/app/com.example.aguas.data/index.html
+$dokka.location:com.example.aguas.data/RetrofitService///PointingToDeclaration/app/com.example.aguas.data/-retrofit-service/index.html
+$dokka.location:com.example.aguas.data/RetrofitService/listPopularMovies/#/PointingToDeclaration/app/com.example.aguas.data/-retrofit-service/list-popular-movies.html
+$dokka.location:com.example.aguas////PointingToDeclaration/app/com.example.aguas/index.html
+$dokka.location:com.example.aguas//agua/#/PointingToDeclaration/app/com.example.aguas/agua.html
+$dokka.location:com.example.aguas//aguaString/#/PointingToDeclaration/app/com.example.aguas/agua-string.html
+$dokka.location:com.example.aguas//gson/#/PointingToDeclaration/app/com.example.aguas/gson.html
+$dokka.location:com.example.aguas/About///PointingToDeclaration/app/com.example.aguas/-about/index.html
+$dokka.location:com.example.aguas/About/About/#/PointingToDeclaration/app/com.example.aguas/-about/-about.html
+$dokka.location:com.example.aguas/Adapter.ViewHolder///PointingToDeclaration/app/com.example.aguas/-adapter/-view-holder/index.html
+$dokka.location:com.example.aguas/Adapter.ViewHolder/ViewHolder/#android.view.View/PointingToDeclaration/app/com.example.aguas/-adapter/-view-holder/-view-holder.html
+$dokka.location:com.example.aguas/Adapter.ViewHolder/bindRow/#com.example.aguas.Datos/PointingToDeclaration/app/com.example.aguas/-adapter/-view-holder/bind-row.html
+$dokka.location:com.example.aguas/Adapter.ViewHolder/circleView/#/PointingToDeclaration/app/com.example.aguas/-adapter/-view-holder/circle-view.html
+$dokka.location:com.example.aguas/Adapter.ViewHolder/subtitleTextView/#/PointingToDeclaration/app/com.example.aguas/-adapter/-view-holder/subtitle-text-view.html
+$dokka.location:com.example.aguas/Adapter.ViewHolder/titleTextView/#/PointingToDeclaration/app/com.example.aguas/-adapter/-view-holder/title-text-view.html
+$dokka.location:com.example.aguas/Adapter///PointingToDeclaration/app/com.example.aguas/-adapter/index.html
+$dokka.location:com.example.aguas/Adapter/Adapter/#kotlin.collections.List[com.example.aguas.Datos]/PointingToDeclaration/app/com.example.aguas/-adapter/-adapter.html
+$dokka.location:com.example.aguas/Adapter/getItemCount/#/PointingToDeclaration/app/com.example.aguas/-adapter/get-item-count.html
+$dokka.location:com.example.aguas/Adapter/onBindViewHolder/#com.example.aguas.Adapter.ViewHolder#kotlin.Int/PointingToDeclaration/app/com.example.aguas/-adapter/on-bind-view-holder.html
+$dokka.location:com.example.aguas/Adapter/onCreateViewHolder/#android.view.ViewGroup#kotlin.Int/PointingToDeclaration/app/com.example.aguas/-adapter/on-create-view-holder.html
+$dokka.location:com.example.aguas/Agua///PointingToDeclaration/app/com.example.aguas/-agua/index.html
+$dokka.location:com.example.aguas/Agua/Agua/#kotlin.Int#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/app/com.example.aguas/-agua/-agua.html
+$dokka.location:com.example.aguas/Agua/estacion/#/PointingToDeclaration/app/com.example.aguas/-agua/estacion.html
+$dokka.location:com.example.aguas/Agua/fecha/#/PointingToDeclaration/app/com.example.aguas/-agua/fecha.html
+$dokka.location:com.example.aguas/Agua/id/#/PointingToDeclaration/app/com.example.aguas/-agua/id.html
+$dokka.location:com.example.aguas/Agua/idEstacion/#/PointingToDeclaration/app/com.example.aguas/-agua/id-estacion.html
+$dokka.location:com.example.aguas/Agua/senal/#/PointingToDeclaration/app/com.example.aguas/-agua/senal.html
+$dokka.location:com.example.aguas/Agua/valor/#/PointingToDeclaration/app/com.example.aguas/-agua/valor.html
+$dokka.location:com.example.aguas/Ajustes///PointingToDeclaration/app/com.example.aguas/-ajustes/index.html
+$dokka.location:com.example.aguas/Ajustes/Ajustes/#/PointingToDeclaration/app/com.example.aguas/-ajustes/-ajustes.html
+$dokka.location:com.example.aguas/Datos///PointingToDeclaration/app/com.example.aguas/-datos/index.html
+$dokka.location:com.example.aguas/Datos/Datos/#kotlin.String#kotlin.String/PointingToDeclaration/app/com.example.aguas/-datos/-datos.html
+$dokka.location:com.example.aguas/Datos/hex/#/PointingToDeclaration/app/com.example.aguas/-datos/hex.html
+$dokka.location:com.example.aguas/Datos/name/#/PointingToDeclaration/app/com.example.aguas/-datos/name.html
+$dokka.location:com.example.aguas/MainActivity///PointingToDeclaration/app/com.example.aguas/-main-activity/index.html
+$dokka.location:com.example.aguas/MainActivity/MainActivity/#/PointingToDeclaration/app/com.example.aguas/-main-activity/-main-activity.html
+$dokka.location:com.example.aguas/Registro///PointingToDeclaration/app/com.example.aguas/-registro/index.html
+$dokka.location:com.example.aguas/Registro/Registro/#/PointingToDeclaration/app/com.example.aguas/-registro/-registro.html
+$dokka.location:com.example.aguas/menu///PointingToDeclaration/app/com.example.aguas/menu/index.html
+$dokka.location:com.example.aguas/menu/menu/#/PointingToDeclaration/app/com.example.aguas/menu/menu.html
+$dokka.location:com.example.aguas/menu/onCreateOptionsMenu/#android.view.Menu?/PointingToDeclaration/app/com.example.aguas/menu/on-create-options-menu.html
+$dokka.location:com.example.aguas/menu/onOptionsItemSelected/#android.view.MenuItem/PointingToDeclaration/app/com.example.aguas/menu/on-options-item-selected.html
+com.example.aguas
+com.example.aguas.adapterText
+com.example.aguas.data
+
