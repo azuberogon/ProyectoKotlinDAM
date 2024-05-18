@@ -5,7 +5,16 @@
       <entry key="ExampleInstrumentedTest">
         <State />
       </entry>
+      <entry key="MainActivityEspressoTest">
+        <State />
+      </entry>
       <entry key="app">
+        <State />
+      </entry>
+      <entry key="testButtonClickNavigation()">
+        <State />
+      </entry>
+      <entry key="testButtonRegistrarNavigation()">
         <State />
       </entry>
       <entry key="useAppContext()">
