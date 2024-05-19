@@ -11,11 +11,6 @@ import android.widget.Toast
  *
  *
  *
- * @param btnSiguiente esto es una prueba para la documentacion
- *
- * @author Aitor
- * */
-/**
  * Actividad principal de la aplicación que gestiona las acciones de los botones para navegar a otras actividades.
  *
  * @constructor Crea una instancia de `MainActivity`.

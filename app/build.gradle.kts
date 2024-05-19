@@ -73,4 +73,17 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.mockito:mockito-core:3.11.2")
     androidTestImplementation ("androidx.test:rules:1.5.0")
+
+    //APi de gatos
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.0")
+    implementation ("com.squareup.picasso:picasso:2.71828")
+
+    //
+    implementation ("androidx.room:room-runtime:2.4.2")
+    //kapt ("androidx.room:room-compiler:2.6.1")
+    implementation ("androidx.room:room-ktx:2.4.2")
+
+
 }

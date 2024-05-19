@@ -1,15 +1,23 @@
 package com.example.aguas
 
+import CatAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
-
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
+import com.example.aguas.data.ApiGatos
+import com.example.aguas.data.TheCat
+import android.util.Log
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
 /**
  *
  *
@@ -18,13 +26,22 @@ import androidx.recyclerview.widget.RecyclerView
  * @autor Aitor
  * */
 class menu : AppCompatActivity() {
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var catAdapter: CatAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
 
-        val recycler: RecyclerView =
-            findViewById(R.id. recycler)
+        recyclerView = findViewById(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        fetchCatImages()
+
+
+       /* val recycler: RecyclerView =
+            findViewById(R.id.recycler)
         recycler.adapter = Adapter(
             listOf(
                 Datos( "Azul", "#2196F3"),
@@ -41,7 +58,34 @@ class menu : AppCompatActivity() {
 
 
 
+*/
 
+
+
+
+    }
+
+    private fun fetchCatImages() {
+        val apiService = ApiGatos.RetrofitClient.instance.create(ApiGatos.CatApiService::class.java)
+        apiService.getRandomCats(20).enqueue(object : Callback<List<TheCat>> {
+            override fun onResponse(call: Call<List<TheCat>>, response: Response<List<TheCat>>) {
+                if (response.isSuccessful) {
+                    val catImages = response.body()!!
+                    catAdapter = CatAdapter(catImages) { catImage ->
+                        val intent = Intent(this@menu, ComprarComida::class.java)
+                        intent.putExtra("IMAGE_URL", catImage.url)
+                        startActivity(intent)
+                    }
+                    recyclerView.adapter = catAdapter
+                } else {
+                    Log.e("MainActivity", "Error: ${response.errorBody()}")
+                }
+            }
+
+            override fun onFailure(call: Call<List<TheCat>>, t: Throwable) {
+                Log.e("MainActivity", "Failure: ${t.message}")
+            }
+        })
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // Infla el menú; esto agrega los ítems al action bar si está presente.
