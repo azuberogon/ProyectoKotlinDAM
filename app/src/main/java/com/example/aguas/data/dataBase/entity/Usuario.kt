@@ -6,11 +6,18 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
+/**
+ * Data class que representa un usuario con su nombre de usuario y contraseña.
+ */
 data class Usuario(
     val nombreUsuario: String,
     val contrasena: String
 )
 
+/**
+ * Actividad de verificación de inicio de sesión.
+ * Permite al usuario ingresar su nombre de usuario y contraseña para iniciar sesión.
+ */
 class verificacion : AppCompatActivity() {
 
     private lateinit var etUsuario: EditText
@@ -40,6 +47,14 @@ class verificacion : AppCompatActivity() {
         }
     }
 
+    /**
+     * Función para validar el nombre de usuario y la contraseña ingresados por el usuario.
+     *
+     * @param usuario El usuario esperado.
+     * @param nombreUsuario El nombre de usuario ingresado por el usuario.
+     * @param contrasena La contraseña ingresada por el usuario.
+     * @return true si el nombre de usuario y la contraseña coinciden con el usuario esperado, false de lo contrario.
+     */
     private fun validarUsuario(usuario: Usuario, nombreUsuario: String, contrasena: String): Boolean {
         return usuario.nombreUsuario == nombreUsuario && usuario.contrasena == contrasena
     }

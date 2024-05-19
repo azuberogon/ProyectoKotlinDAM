@@ -14,58 +14,82 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.aguas.data.ApiGatos
 import com.example.aguas.data.TheCat
 import android.util.Log
+import com.example.aguas.Favoritos
 import com.example.aguas.R
+import com.example.aguas.cestaDeLaCompra
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 /**
+ * Actividad del menú principal que muestra una lista de imágenes de gatos obtenidas desde una API.
  *
+ * Esta actividad también proporciona opciones de menú para navegar a otras partes de la aplicación, como ajustes, registro, inicio de sesión y sobre.
  *
- *
- *
- * @autor Aitor
- * */
+ * @constructor Crea una instancia de `menu`.
+ * @property recyclerView El RecyclerView que muestra las imágenes de gatos.
+ * @property catAdapter El adaptador para el RecyclerView que maneja la lista de imágenes de gatos.
+ * @see AppCompatActivity
+ * @since 1.0
+ * @author Aitor
+ */
 class menu : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var catAdapter: CatAdapter
+
+    /**
+     * Método de callback que se llama cuando la actividad es creada.
+     *
+     * Configura el RecyclerView y llama a la función para obtener las imágenes de gatos desde la API.
+     *
+     * @param savedInstanceState Instancia de estado de la actividad previamente guardada, si la hay.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-
 
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         fetchCatImages()
+        recyclerView = findViewById(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
+        fetchCatImages()
 
-       /* val recycler: RecyclerView =
-            findViewById(R.id.recycler)
-        recycler.adapter = Adapter(
-            listOf(
-                Datos( "Azul", "#2196F3"),
-                Datos( "Rojo", "#2196F3"),
-                Datos( "Naranja", "#2196F3"),
-                Datos( "Azul", "#2196F3"),
-                Datos( "Rojo", "#2196F3"),
-                Datos( "Naranja", "#2196F3")
-            )
-        )
-
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-
-
-
-*/
-
-
-
-
+        // Configuración del BottomNavigationView
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.add_favorites -> {
+                    val intent = Intent(this@menu, Favoritos::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.misgatos -> {
+                    // No estoy seguro de qué actividad debería abrir esta opción
+                    // Aquí puedes cambiarla según lo que necesites
+                    val intent = Intent(this@menu, Menu::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.compra -> {
+                    val intent = Intent(this@menu, cestaDeLaCompra::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
+
+
+    /**
+     * Obtiene las imágenes de gatos desde la API y las muestra en el RecyclerView.
+     */
     private fun fetchCatImages() {
         val apiService = ApiGatos.RetrofitClient.instance.create(ApiGatos.CatApiService::class.java)
         apiService.getRandomCats(20).enqueue(object : Callback<List<TheCat>> {
@@ -88,12 +112,19 @@ class menu : AppCompatActivity() {
             }
         })
     }
+
+    /**
+     * Infla el menú; esto agrega los ítems al action bar si está presente.
+     */
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        // Infla el menú; esto agrega los ítems al action bar si está presente.
         menuInflater.inflate(R.menu.menu_tres_puntos, menu)
         return true
     }
-    override fun onOptionsItemSelected (item: MenuItem): Boolean {
+
+    /**
+     * Maneja los clics en los ítems del menú.
+     */
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.ajustes_action -> {
                 Toast.makeText(this, "Ajustes", Toast.LENGTH_SHORT).show()
@@ -108,45 +139,20 @@ class menu : AppCompatActivity() {
                 return true
             }
             R.id.inicioSesion_action -> {
-                Toast.makeText(this, "inicio de sesion", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Inicio de sesión", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 return true
             }
             R.id.about_action -> {
-                Toast.makeText(this, "about", Toast.LENGTH_SHORT).show()
-
+                Toast.makeText(this, "Acerca de", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, About::class.java)
                 startActivity(intent)
                 return true
             }
             else -> return super.onOptionsItemSelected(item)
         }
-
     }
-   /* private fun buildColors (): List<Datos> {
-        return listOf(
-            Datos(getString(R.string.red), getColorHex(R.color.red)),
-            Datos(getString(R.string.indigo), getColorHex(R.color.indigo)),
-            Datos(getString(R.string.green), getColorHex(R.color.green)),
-            Datos(getString(R.string.orange), getColorHex(R.color.orange)),
-            Datos(getString(R.string.blue), getColorHex(R.color.blue)),
-            Datos(getString(R.string.yellow), getColorHex(R.color.yellow)),
-            Datos(getString(R.string.bluegrey), getColorHex(R.color.bluegrey)),
-            Datos(getString(R.string.teal), getColorHex(R.color.teal)),
-            Datos(getString(R.string.deeppurple), getColorHex(R.color.deeppurple)),
-            Datos(getString(R.string.cyan), getColorHex(R.color.cyan)),
-            Datos(getString(R.string.brown), getColorHex(R.color.brown))
-        )
-    }
-    private fun getColorHex (colorResId: Int): String {
-        return String.format("#%06X", 0xFFFFFF and ContextCompat.getColor( this, colorResId))
-    }
-
-*/
-
-
-
 }
 
 

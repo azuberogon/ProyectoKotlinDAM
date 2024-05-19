@@ -22,14 +22,22 @@ import com.example.aguas.data.TheCat
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
+/**
+ * Actividad que muestra los gatos favoritos del usuario.
+ *
+ * Esta actividad se encarga de mostrar los gatos favoritos seleccionados por el usuario.
+ *
+ * @constructor Crea una instancia de `Favoritos`.
+ * @see AppCompatActivity
+ * @since 1.0
+ */
 class Favoritos : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var catAdapter: CatAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favoritos)
-
 
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -37,6 +45,9 @@ class Favoritos : AppCompatActivity() {
         fetchCatImages()
     }
 
+    /**
+     * Método que solicita imágenes de gatos aleatorios desde la API y las muestra en el RecyclerView.
+     */
     private fun fetchCatImages() {
         val apiService = ApiGatos.RetrofitClient.instance.create(ApiGatos.CatApiService::class.java)
         apiService.getRandomCats(20).enqueue(object : Callback<List<TheCat>> {
@@ -50,21 +61,23 @@ class Favoritos : AppCompatActivity() {
                     }
                     recyclerView.adapter = catAdapter
                 } else {
-                    Log.e("Menu", "Error: ${response.errorBody()}")
+                    Log.e("Favoritos", "Error: ${response.errorBody()}")
                 }
             }
 
             override fun onFailure(call: Call<List<TheCat>>, t: Throwable) {
-                Log.e("Menu", "Failure: ${t.message}")
+                Log.e("Favoritos", "Failure: ${t.message}")
             }
         })
     }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // Infla el menú; esto agrega los ítems al action bar si está presente.
         menuInflater.inflate(R.menu.menu_tres_puntos, menu)
         return true
     }
-    override fun onOptionsItemSelected (item: MenuItem): Boolean {
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.ajustes_action -> {
                 Toast.makeText(this, "Ajustes", Toast.LENGTH_SHORT).show()
@@ -79,42 +92,18 @@ class Favoritos : AppCompatActivity() {
                 return true
             }
             R.id.inicioSesion_action -> {
-                Toast.makeText(this, "inicio de sesion", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Inicio de sesión", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 return true
             }
             R.id.about_action -> {
-                Toast.makeText(this, "about", Toast.LENGTH_SHORT).show()
-
+                Toast.makeText(this, "About", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, About::class.java)
                 startActivity(intent)
                 return true
             }
             else -> return super.onOptionsItemSelected(item)
         }
-
     }
-   /* private fun buildColors (): List<Datos> {
-        return listOf(
-            Datos(getString(R.string.red), getColorHex(R.color.red)),
-            Datos(getString(R.string.indigo), getColorHex(R.color.indigo)),
-            Datos(getString(R.string.green), getColorHex(R.color.green)),
-            Datos(getString(R.string.orange), getColorHex(R.color.orange)),
-            Datos(getString(R.string.blue), getColorHex(R.color.blue)),
-            Datos(getString(R.string.yellow), getColorHex(R.color.yellow)),
-            Datos(getString(R.string.bluegrey), getColorHex(R.color.bluegrey)),
-            Datos(getString(R.string.teal), getColorHex(R.color.teal)),
-            Datos(getString(R.string.deeppurple), getColorHex(R.color.deeppurple)),
-            Datos(getString(R.string.cyan), getColorHex(R.color.cyan)),
-            Datos(getString(R.string.brown), getColorHex(R.color.brown))
-        )
-    }
-    private fun getColorHex (colorResId: Int): String {
-        return String.format("#%06X", 0xFFFFFF and ContextCompat.getColor( this, colorResId))
-    }
-
-*/
-
-
 }

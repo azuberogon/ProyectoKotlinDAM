@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:padding="8dp"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:text="@string/sample_contract_text"
             />
 

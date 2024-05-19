@@ -6,30 +6,17 @@ import android.widget.TextView
 import com.example.aguas.R
 
 /**
- *
- *
- *
- *
+ * Actividad que muestra información acerca de la aplicación.
  * @autor Aitor
- * */
+ */
 class About : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
-       /* val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
-        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val loremIpsum = resources.getString(R.string.sample_contract_text)
-        val loremIpsumArray = loremIpsum.split("\n").toTypedArray()
-
-        val adapter = AdapterText(loremIpsumArray)
-        recyclerView.adapter = adapter
-    */
-
-
+        // Setea el texto del ScrollView con el texto de muestra del contrato
         val scrollViewText = findViewById<TextView>(R.id.loremimpsun)
         val loremIpsum = resources.getString(R.string.sample_contract_text)
         scrollViewText.text = loremIpsum
-
     }
 }

@@ -8,17 +8,15 @@ import android.widget.Switch
 import com.example.aguas.R
 
 /**
- *
- *
- *
- *
+ * Actividad que permite ajustar la configuración de la aplicación.
  * @autor Aitor
- * */
+ */
 class Ajustes : AppCompatActivity() {
     @SuppressLint("UseSwitchCompatOrMaterialCode")
     private lateinit var switchModoOscuro: Switch
     private val PREFS_NAME = "theme_prefs"
     private val KEY_THEME = "current_theme"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ajustes)
@@ -40,6 +38,7 @@ class Ajustes : AppCompatActivity() {
             recreate()
         }
     }
+
     private fun setAppTheme(isDarkTheme: Boolean) {
         if (isDarkTheme) {
             setTheme(R.style.AppTheme)
