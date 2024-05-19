@@ -1,12 +1,14 @@
-package com.example.aguas
+package com.example.aguas.adapterText
 
-import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.aguas.Layout.Datos
+import com.example.aguas.R
+
 /**
  *
  *

@@ -1,4 +1,4 @@
-package com.example.aguas
+package com.example.aguas.Layout
 /**
  *
  *

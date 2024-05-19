@@ -1,11 +1,10 @@
-package com.example.aguas
+package com.example.aguas.Layout
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.aguas.adapterText.AdapterText
+import com.example.aguas.R
+
 /**
  *
  *

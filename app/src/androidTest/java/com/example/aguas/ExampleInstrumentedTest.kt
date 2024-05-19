@@ -8,6 +8,7 @@ import org.junit.Assert.*
 import org.junit.Rule
 
 import androidx.test.rule.ActivityTestRule
+import com.example.aguas.Layout.MainActivity
 
 
 /**

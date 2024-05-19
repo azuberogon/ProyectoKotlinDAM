@@ -8,29 +8,35 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_logo"
+        android:icon="@mipmap/ic_logo_gatos"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_logo_round"
+        android:roundIcon="@mipmap/ic_logo_gatos_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Aguas"
+        android:theme="@style/Theme.AppCompat"
         tools:targetApi="31">
         <activity
-            android:name=".ComprarComida"
+            android:name=".Favoritos"
             android:exported="false" />
         <activity
-            android:name=".About"
+            android:name=".cestaDeLaCompra"
             android:exported="false" />
         <activity
-            android:name=".Registro"
+            android:name=".Layout.ComprarComida"
             android:exported="false" />
         <activity
-            android:name=".Ajustes"
+            android:name=".Layout.About"
             android:exported="false" />
         <activity
-            android:name=".menu"
+            android:name=".Layout.Registro"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Layout.Ajustes"
+            android:exported="false" />
+        <activity
+            android:name=".Layout.menu"
+            android:exported="false" />
+        <activity
+            android:name=".Layout.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

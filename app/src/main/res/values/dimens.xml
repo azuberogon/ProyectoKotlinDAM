@@ -5,5 +5,27 @@
     <dimen name="row_padding" >8dp</dimen>
     <dimen name="text_row_padding_image" >16dp</dimen>
     <dimen name="elevation_toolbar" >4dp</dimen>
-
+    <dimen name="width_foto">60dp</dimen>
+    <dimen name="height_foto">60dp</dimen>
+    <dimen name="margin_start_foto">10dp</dimen>
+    <dimen name="margin_top_NomProd">5dp</dimen>
+    <dimen name="margin_start_NomProd">10dp</dimen>
+    <dimen name="text_size_NomProd">18sp</dimen>
+    <dimen name="margin_end_precio">10dp</dimen>
+    <dimen name="margin_start_descripcion">20dp</dimen>
+    <dimen name="margin_bottom_descripcion">5dp</dimen>
+    <dimen name="textSize_lista_articulos">20sp</dimen>
+    <dimen name="main_buttons_width">300dp</dimen>
+    <dimen name="main_buttons_height">50dp</dimen>
+    <dimen name="main_buttons_margin_top_bottom">10dp</dimen>
+    <dimen name="listaarticulos_button_margin_top_bottom">32dp</dimen>
+    <dimen name="form_widths">300dp</dimen>
+    <dimen name="form_heights">50dp</dimen>
+    <dimen name="form_description_height">100dp</dimen>
+    <dimen name="hint_text_padding">10dp</dimen>
+    <dimen name="padding_tables_16dp">10dp</dimen>
+    <dimen name="title_tables_text_size">18sp</dimen>
+    <dimen name="rows_tables_size">16sp</dimen>
+    <dimen name="ancho_linea_tabla">3dip</dimen>
+    <string name="unidades">Unidades</string>
 </resources>

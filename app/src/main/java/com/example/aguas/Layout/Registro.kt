@@ -1,9 +1,10 @@
-package com.example.aguas
+package com.example.aguas.Layout
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.aguas.R
 
 /**
  * Actividad de registro que permite al usuario proceder o cancelar el registro.

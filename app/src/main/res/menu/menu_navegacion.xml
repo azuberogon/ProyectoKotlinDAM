@@ -5,13 +5,9 @@
         android:title="@string/add_favorites"
         android:icon="@drawable/corazon" />
     <item
-        android:id="@+id/misPeliculas"
-        android:title="@string/misPeliculas"
+        android:id="@+id/misgatos"
+        android:title="@string/Gatos"
         android:icon="@drawable/base_de_datos"/>
-    <item
-        android:id="@+id/pelicula"
-        android:title="@string/peliculas"
-        android:icon="@drawable/pelicula"/>
     <item
         android:id="@+id/compra"
         android:title="@string/compra"

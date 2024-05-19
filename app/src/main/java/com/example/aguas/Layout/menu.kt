@@ -1,4 +1,4 @@
-package com.example.aguas
+package com.example.aguas.Layout
 
 import CatAdapter
 import android.content.Intent
@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.aguas.data.ApiGatos
 import com.example.aguas.data.TheCat
 import android.util.Log
+import com.example.aguas.R
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -78,12 +79,12 @@ class menu : AppCompatActivity() {
                     }
                     recyclerView.adapter = catAdapter
                 } else {
-                    Log.e("MainActivity", "Error: ${response.errorBody()}")
+                    Log.e("Menu", "Error: ${response.errorBody()}")
                 }
             }
 
             override fun onFailure(call: Call<List<TheCat>>, t: Throwable) {
-                Log.e("MainActivity", "Failure: ${t.message}")
+                Log.e("Menu", "Failure: ${t.message}")
             }
         })
     }
@@ -123,7 +124,7 @@ class menu : AppCompatActivity() {
         }
 
     }
-    private fun buildColors (): List<Datos> {
+   /* private fun buildColors (): List<Datos> {
         return listOf(
             Datos(getString(R.string.red), getColorHex(R.color.red)),
             Datos(getString(R.string.indigo), getColorHex(R.color.indigo)),
@@ -142,7 +143,7 @@ class menu : AppCompatActivity() {
         return String.format("#%06X", 0xFFFFFF and ContextCompat.getColor( this, colorResId))
     }
 
-
+*/
 
 
 
