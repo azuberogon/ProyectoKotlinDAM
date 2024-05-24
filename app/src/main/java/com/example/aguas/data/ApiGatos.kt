@@ -32,4 +32,15 @@ class ApiGatos {
                 .build()
         }
     }
+    object ApiGatos {
+        private const val BASE_URL = "https://api.example.com/"
+
+        object RetrofitClient {
+            val instance: Retrofit
+                get() = Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build()
+        }
+    }
 }

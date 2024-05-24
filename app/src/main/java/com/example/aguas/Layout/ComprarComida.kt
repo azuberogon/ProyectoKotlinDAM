@@ -2,6 +2,7 @@ package com.example.aguas.Layout
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.ImageView
@@ -11,9 +12,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.aguas.R
 import com.example.aguas.cestaDeLaCompra
-import com.example.aguas.data.dataBase.CatDatabase
+
+import com.example.aguas.data.dataBase.LocalDataBase
 import com.example.aguas.data.dataBase.entity.Cat
 import com.squareup.picasso.Picasso
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 /**
@@ -51,36 +55,44 @@ class ComprarComida : AppCompatActivity() {
                 val name = txtNombre.text.toString()
                 val age = txtEdad.text.toString().toInt()
                 val gender = txtGenero.text.toString()
-                val premium = checkComidaPremium.isChecked
+
+
+                //val premium = checkComidaPremium.isChecked
 
                 // Crear un objeto Cat con la información proporcionada
-                val cat = Cat(catId, imageUrl, name, age, gender, premium)
+                var cat = Cat(0, imageUrl, name, age, gender, true )
+                var localDb= LocalDataBase.getInstance(this)
+                GlobalScope.launch(Dispatchers.IO) {
+                    localDb.catDao().insert(cat)
+                }
 
                 // Guardar el gato en la base de datos
-                saveCatToDatabase(cat)
+                //saveCatToDatabase(cat)
             }
 
             // Iniciar la actividad de la cesta de la compra después de guardar el gato
             val intent = Intent(this, cestaDeLaCompra::class.java)
             startActivity(intent)
         }
-
         // Listener del botón de cancelar
         btnCancelar.setOnClickListener {
             finish()  // Finalizar la actividad actual y volver a la anterior
         }
-
-
-
-
-
-
     }
-
     /**
      * Guarda la información del gato en la base de datos.
      * @param cat El objeto Cat que se va a guardar.
      */
+    /*
+    fun guardar(view: View){
+        var localDb= LocalDataBase.getInstance(this)
+            GlobalScope.launch(Dispatchers.IO) {
+                localDb.catDao().insert()
+            }
+
+    }
+
+
     private fun saveCatToDatabase(cat: Cat) {
         val catDao = CatDatabase.getDatabase(application).catDao()
         lifecycleScope.launch {
@@ -89,5 +101,5 @@ class ComprarComida : AppCompatActivity() {
                 Toast.makeText(this@ComprarComida, "¡Gracias por tu compra!", Toast.LENGTH_SHORT).show()
             }
         }
-    }
+    }*/
 }

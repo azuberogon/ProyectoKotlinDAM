@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var etUsuario: EditText
     private lateinit var etContrasena: EditText
     private lateinit var btnSiguiente: Button
-    private lateinit var btnRegistrar: Button
+    private lateinit var btnRegistro: Button
 
     /**
      * Método de callback que se llama cuando la actividad es creada.
@@ -55,12 +55,6 @@ class MainActivity : AppCompatActivity() {
 
             val usuario = Usuario(nombreUsuario = "root", contrasena = "root")
 
-            btnRegistrar = findViewById(R.id.btnRegistrar)
-            btnRegistrar.setOnClickListener {
-                val intent = Intent(this@MainActivity, Registro::class.java)
-                startActivity(intent)
-            }
-
             if (validarUsuario(usuario, usuarioIngresado, contrasenaIngresada)) {
                 Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
                 // Navegar a otra actividad si el inicio de sesión es exitoso
@@ -69,6 +63,12 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Nombre de usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
             }
+
+        }
+        btnRegistro = findViewById(R.id.btnRegistrar)
+        btnRegistro.setOnClickListener {
+            val intent = Intent(this@MainActivity, Registro::class.java)
+            startActivity(intent)
         }
     }
 

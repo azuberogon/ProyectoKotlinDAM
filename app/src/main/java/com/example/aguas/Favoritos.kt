@@ -1,6 +1,5 @@
 package com.example.aguas
 
-import CatAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,32 +7,25 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.aguas.Layout.About
-import com.example.aguas.Layout.Ajustes
-import com.example.aguas.Layout.ComprarComida
-import com.example.aguas.Layout.Datos
-import com.example.aguas.Layout.MainActivity
-import com.example.aguas.Layout.Registro
+import com.example.aguas.Layout.*
+import com.example.aguas.adapterText.CatAdapterFav
 import com.example.aguas.data.ApiGatos
 import com.example.aguas.data.TheCat
+import com.example.aguas.data.dataBase.LocalDataBase
+import com.example.aguas.data.dataBase.entity.Cat
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-/**
- * Actividad que muestra los gatos favoritos del usuario.
- *
- * Esta actividad se encarga de mostrar los gatos favoritos seleccionados por el usuario.
- *
- * @constructor Crea una instancia de `Favoritos`.
- * @see AppCompatActivity
- * @since 1.0
- */
+
 class Favoritos : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var catAdapter: CatAdapter
+    private lateinit var catAdapterFav: CatAdapterFav
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,23 +35,46 @@ class Favoritos : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         fetchCatImages()
+
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.misgatos -> {
+                    val intent = Intent(this@Favoritos, Menu::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.compra -> {
+                    val intent = Intent(this@Favoritos, ComprarComida::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
-    /**
-     * Método que solicita imágenes de gatos aleatorios desde la API y las muestra en el RecyclerView.
-     */
     private fun fetchCatImages() {
+        val db = LocalDataBase.getInstance(this)
+        val catDao = db.catDao()
+
+        // Fetch cats from local database
+        CoroutineScope(Dispatchers.IO).launch {
+            val cats = catDao.getAllCats()
+            runOnUiThread {
+                catAdapterFav = CatAdapterFav(cats)
+                recyclerView.adapter = catAdapterFav
+            }
+        }
+
+        // Fetch cats from API
         val apiService = ApiGatos.RetrofitClient.instance.create(ApiGatos.CatApiService::class.java)
         apiService.getRandomCats(20).enqueue(object : Callback<List<TheCat>> {
             override fun onResponse(call: Call<List<TheCat>>, response: Response<List<TheCat>>) {
                 if (response.isSuccessful) {
                     val catImages = response.body()!!
-                    catAdapter = CatAdapter(catImages) { catImage ->
-                        val intent = Intent(this@Favoritos, ComprarComida::class.java)
-                        intent.putExtra("IMAGE_URL", catImage.url)
-                        startActivity(intent)
-                    }
-                    recyclerView.adapter = catAdapter
+                    catAdapterFav = CatAdapterFav(catImages.map { Cat(0, it.url, "Nombre Desconocido", 0, "Desconocido", false) })
+                    recyclerView.adapter = catAdapterFav
                 } else {
                     Log.e("Favoritos", "Error: ${response.errorBody()}")
                 }
@@ -72,7 +87,6 @@ class Favoritos : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        // Infla el menú; esto agrega los ítems al action bar si está presente.
         menuInflater.inflate(R.menu.menu_tres_puntos, menu)
         return true
     }
