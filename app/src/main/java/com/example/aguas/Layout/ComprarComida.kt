@@ -49,24 +49,27 @@ class ComprarComida : AppCompatActivity() {
 
         // Listener del botón de guardar
         btnGuardar.setOnClickListener {
-            // Verificar que el ID y la URL del gato no son nulos
-            if (catId != null && imageUrl != null) {
-                // Obtener el nombre, edad, género y si la comida es premium del usuario
+            // Verificar que el ID y la URL del gato no son nulos0
+
+            var cat = imageUrl?.let { it1 -> Cat(0, it1, null, null, null, true ) }
+            if (imageUrl != null) {
+
                 val name = txtNombre.text.toString()
                 val age = txtEdad.text.toString().toInt()
                 val gender = txtGenero.text.toString()
 
 
                 //val premium = checkComidaPremium.isChecked
-
+                // Guardar el gato en la base de datos
                 // Crear un objeto Cat con la información proporcionada
                 var cat = Cat(0, imageUrl, name, age, gender, true )
+
                 var localDb= LocalDataBase.getInstance(this)
                 GlobalScope.launch(Dispatchers.IO) {
                     localDb.catDao().insert(cat)
                 }
 
-                // Guardar el gato en la base de datos
+
                 //saveCatToDatabase(cat)
             }
 

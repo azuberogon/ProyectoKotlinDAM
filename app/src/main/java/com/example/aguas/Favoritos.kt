@@ -73,7 +73,7 @@ class Favoritos : AppCompatActivity() {
             override fun onResponse(call: Call<List<TheCat>>, response: Response<List<TheCat>>) {
                 if (response.isSuccessful) {
                     val catImages = response.body()!!
-                    catAdapterFav = CatAdapterFav(catImages.map { Cat(0, it.url, "Nombre Desconocido", 0, "Desconocido", false) })
+                    catAdapterFav = CatAdapterFav(catImages.map { Cat(0, it.url, "Nombre Desconocido", 0, "Desconocido", true) })
                     recyclerView.adapter = catAdapterFav
                 } else {
                     Log.e("Favoritos", "Error: ${response.errorBody()}")
