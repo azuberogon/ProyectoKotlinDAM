@@ -19,15 +19,18 @@
             android:exported="false" />
         <activity
             android:name=".cestaDeLaCompra"
+            android:theme="@style/Theme.MaterialComponents"
             android:exported="false" />
         <activity
             android:name=".Layout.ComprarComida"
             android:exported="false" />
         <activity
             android:name=".Layout.About"
+            android:theme="@style/Theme.MaterialComponents"
             android:exported="false" />
         <activity
             android:name=".Layout.Registro"
+            android:theme="@style/Theme.MaterialComponents"
             android:exported="false" />
         <activity
             android:name=".Layout.Ajustes"
@@ -45,5 +48,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

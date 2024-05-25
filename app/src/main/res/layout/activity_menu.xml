@@ -5,6 +5,7 @@
     android:id="@+id/menuLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".Layout.menu">
 
 
@@ -19,20 +20,21 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
-        android:layout_width="412dp"
-        android:layout_height="80dp"
+        android:layout_width="410dp"
+        android:layout_height="39dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/menu_tres_puntos">
+        app:layout_constraintTop_toTopOf="parent">
+        <!--app:menu="@menu/menu_tres_puntos"-->
+
 
     </com.google.android.material.appbar.MaterialToolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="411dp"
-        android:layout_height="589dp"
+        android:layout_width="413dp"
+        android:layout_height="747dp"
         android:layout_marginTop="72dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"

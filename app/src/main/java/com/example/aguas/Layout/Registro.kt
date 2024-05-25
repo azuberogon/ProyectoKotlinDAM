@@ -1,5 +1,6 @@
 package com.example.aguas.Layout
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -40,7 +41,7 @@ class Registro : AppCompatActivity() {
             finish()
         }
 
-        btnCancelar = findViewById(R.id.btnCancelar)
+        btnCancelar = findViewById(R.id.btnRegistrar)
         btnCancelar.setOnClickListener {
             finish()
             val intent = Intent(this@Registro, MainActivity::class.java)

@@ -8,6 +8,7 @@
     android:paddingBottom="@dimen/row_padding"
     android:paddingLeft="@dimen/general_padding"
     android:paddingRight="@dimen/general_padding"
+    android:theme="@style/Theme.AppCompat"
     android:paddingTop="@dimen/row_padding">
     <View
         android:id="@+id/circleView"

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".Layout.ComprarComida">
 
     <ImageView
@@ -16,8 +17,8 @@
 
     <Button
         android:id="@+id/btnGuardar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="386dp"
+        android:layout_height="47dp"
         android:layout_margin="16dp"
         android:layout_marginTop="84dp"
         android:text="@string/comprar_comida"
